@@ -1,12 +1,14 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:wallstreet/sections/footer.dart';
 import 'package:wallstreet/sections/government_departments.dart';
 import 'package:wallstreet/widgets/selection.dart';
-
 import '../sections/aboutus.dart';
 import '../sections/bank_accounts.dart';
 import '../sections/our_services.dart';
+import '../sections/quote.dart';
+import '../sections/why_us.dart';
 import '../widgets/header.dart';
 
 class HomePage extends StatefulWidget {
@@ -75,6 +77,12 @@ class _HomePageState extends State<HomePage> {
               ),
               GovernmentDepartments(),
               BankAccounts(),
+              SizedBox(
+                height: 40,
+              ),
+              Quote(),
+              WhyUs(),
+              Footer(),
             ],
           ),
         ),

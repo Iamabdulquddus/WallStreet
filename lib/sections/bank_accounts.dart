@@ -27,9 +27,19 @@ class BankAccounts extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 50,
+          height: 20,
         ),
-
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/emirates-nbd.jpg', scale: 2.5, fit: BoxFit.contain,),
+            Image.asset('assets/images/mashreq.jpg', scale: 2.5, fit: BoxFit.contain,),
+            Image.asset('assets/images/rakbank.jpg', scale: 2.5, fit: BoxFit.contain,),
+            Image.asset('assets/images/emirates-islamic.jpg', scale: 2.5, fit: BoxFit.contain,),
+            Image.asset('assets/images/dib.jpg', scale: 2.5, fit: BoxFit.contain,),
+            Image.asset('assets/images/adib.jpg', scale: 2.5, fit: BoxFit.contain,),
+          ],
+        ),
       ],
     );
   }
