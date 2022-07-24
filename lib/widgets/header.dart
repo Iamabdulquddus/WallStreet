@@ -20,7 +20,7 @@ class _HeaderState extends State<Header> {
       child: Row(
         children: [
           SizedBox(
-            width: screenSize.width/5,
+            width: screenSize.width / 5,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,11 +28,13 @@ class _HeaderState extends State<Header> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 15),
                 child: Row(
-
                   children: [
-                    Image.asset('assets/images/Logo.png',  width: screenSize.height / 4.5,),
+                    Image.asset(
+                      'assets/images/Logo.png',
+                      width: screenSize.height / 4.5,
+                    ),
                     SizedBox(
-                      width: screenSize.width/18,
+                      width: screenSize.width / 18,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -71,7 +73,7 @@ class _HeaderState extends State<Header> {
                           ],
                         ),
                         SizedBox(
-                          width: screenSize.width/40,
+                          width: screenSize.width / 40,
                         ),
                         Column(
                           children: [
@@ -108,7 +110,7 @@ class _HeaderState extends State<Header> {
                           ],
                         ),
                         SizedBox(
-                          width:screenSize.width/40,
+                          width: screenSize.width / 40,
                         ),
                         Column(
                           children: [
@@ -138,7 +140,6 @@ class _HeaderState extends State<Header> {
                                     Row(
                                       children: [
                                         Icon(
-
                                           Icons.star,
                                           color: Color(0xffd18d06),
                                           size: 15,
@@ -188,17 +189,21 @@ class _HeaderState extends State<Header> {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                        color: Color(0xff141182),
-                        height: 46,
-    width: screenSize.height / 4.4,
-                        child: Center(
-                          child: Text(
-                            "- Get a free quote",
-                            style:
-                            TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white),
-                          ),
+                      TextButton(
+                        onPressed: () {  },
+                        style: TextButton.styleFrom(
+                         backgroundColor: Color(0xff141182),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(0),),
+                          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 21),
+
+                        ),
+                        child: Text(
+                          "- Get a free quote",
+                          style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ),
                       ),
                       SizedBox(
@@ -206,39 +211,43 @@ class _HeaderState extends State<Header> {
                       ),
                       Row(
                         children: [
-
-                          SizedBox(width: 30,),
+                          SizedBox(
+                            width: 30,
+                          ),
                           Container(
                             color: Colors.grey.shade100,
                             child: Padding(
                               padding: const EdgeInsets.all(10),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   HeaderNav(text: "FREE ZONE", selected: true),
                                   SizedBox(
-                                    width: screenSize.width/50,
+                                    width: screenSize.width / 50,
                                   ),
                                   HeaderNav(text: "OFFSHORE", selected: false),
                                   SizedBox(
-                                    width: screenSize.width/50,
+                                    width: screenSize.width / 50,
                                   ),
                                   HeaderNav(text: "MAINLAND", selected: false),
                                   SizedBox(
-                                    width: screenSize.width/50,
+                                    width: screenSize.width / 50,
                                   ),
-                                  HeaderNav(text: "PRO SERVICES", selected: false),
+                                  HeaderNav(
+                                      text: "PRO SERVICES", selected: false),
                                   SizedBox(
-                                    width: screenSize.width/50,
+                                    width: screenSize.width / 50,
                                   ),
                                   HeaderNav(text: "BANKS", selected: false),
                                   SizedBox(
-                                    width: screenSize.width/50,
+                                    width: screenSize.width / 50,
                                   ),
-                                  HeaderNav(text: "OTHER SERVICES", selected: false),
+                                  HeaderNav(
+                                      text: "OTHER SERVICES", selected: false),
                                   SizedBox(
-                                    width: screenSize.width/50,
+                                    width: screenSize.width / 50,
                                   ),
                                   HeaderNav(text: "Contact", selected: false),
                                 ],
@@ -249,13 +258,12 @@ class _HeaderState extends State<Header> {
                       ),
                       Container(
                         padding: EdgeInsets.fromLTRB(1, 1, 2, 0),
-                        width: screenSize.width/7.5,
+                        width: screenSize.width / 7.5,
                         height: 42,
                         child: buildSearchField(),
                       ),
                     ],
                   ),
-
                 ],
               ),
             ],
@@ -304,8 +312,6 @@ class _HeaderNavState extends State<HeaderNav> {
     );
   }
 }
-
-
 
 Widget buildSearchField() {
   const color = Colors.grey;

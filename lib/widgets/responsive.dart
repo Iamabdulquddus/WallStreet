@@ -41,3 +41,53 @@ class ResponsiveWidget extends StatelessWidget {
     );
   }
 }
+
+
+
+
+// var items1 = [
+//   'Select Activity',
+//   'Services',
+//   'Holding',
+//   'Specific Trading',
+//   'General Trading',
+//   'Commericals',
+//   'E-Commerce',
+//   'Media',
+// ];
+// var items2 = [
+//   'No. of Shareholders',
+//   '1 Shareholders',
+//   '2 Shareholders',
+//   '3 Shareholders',
+//   '4 Shareholders',
+//   '5 Shareholders',
+//   '6 Shareholders',
+//   '7 Shareholders',
+//   '8 Shareholders',
+// ];
+// var items3 = [
+//   'Visa Allocation',
+//   '0 Visa',
+//   '1 Visa',
+//   '2 Visa',
+//   '3 Visa',
+//   '4 Visa',
+//   '5 Visa',
+//   '6 Visa',
+//   '7 Visa',
+//   '8 Visa',
+//   '9 Visa',
+//   '10 Visa',
+// ];
+// var items4 = [
+//   'All Emirates',
+//   'Dubai',
+//   'Abu Dhabi',
+//   'Fujairah',
+//   'Sharjah',
+//   'Ras Al Khaimah',
+//   'Ajman',
+//   'Umm Al Quwain',
+// ];
+
