@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:wallstreet/widgets/responsive.dart';
 
 class BankAccounts extends StatelessWidget {
   const BankAccounts({Key? key}) : super(key: key);
@@ -29,17 +30,86 @@ class BankAccounts extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset('assets/images/emirates-nbd.jpg', scale: 2.5, fit: BoxFit.contain,),
-            Image.asset('assets/images/mashreq.jpg', scale: 2.5, fit: BoxFit.contain,),
-            Image.asset('assets/images/rakbank.jpg', scale: 2.5, fit: BoxFit.contain,),
-            Image.asset('assets/images/emirates-islamic.jpg', scale: 2.5, fit: BoxFit.contain,),
-            Image.asset('assets/images/dib.jpg', scale: 2.5, fit: BoxFit.contain,),
-            Image.asset('assets/images/adib.jpg', scale: 2.5, fit: BoxFit.contain,),
-          ],
-        ),
+        ResponsiveWidget.isSmallScreen(context)
+            ? Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/emirates-nbd.jpg',
+                        scale: 2.5,
+                        fit: BoxFit.contain,
+                      ),
+                      Image.asset(
+                        'assets/images/mashreq.jpg',
+                        scale: 2.5,
+                        fit: BoxFit.contain,
+                      ),
+                      Image.asset(
+                        'assets/images/rakbank.jpg',
+                        scale: 2.5,
+                        fit: BoxFit.contain,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/emirates-islamic.jpg',
+                        scale: 2.5,
+                        fit: BoxFit.contain,
+                      ),
+                      Image.asset(
+                        'assets/images/dib.jpg',
+                        scale: 2.5,
+                        fit: BoxFit.contain,
+                      ),
+                      Image.asset(
+                        'assets/images/adib.jpg',
+                        scale: 2.5,
+                        fit: BoxFit.contain,
+                      ),
+                    ],
+                  ),
+                ],
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/emirates-nbd.jpg',
+                    scale: 2.5,
+                    fit: BoxFit.contain,
+                  ),
+                  Image.asset(
+                    'assets/images/mashreq.jpg',
+                    scale: 2.5,
+                    fit: BoxFit.contain,
+                  ),
+                  Image.asset(
+                    'assets/images/rakbank.jpg',
+                    scale: 2.5,
+                    fit: BoxFit.contain,
+                  ),
+                  Image.asset(
+                    'assets/images/emirates-islamic.jpg',
+                    scale: 2.5,
+                    fit: BoxFit.contain,
+                  ),
+                  Image.asset(
+                    'assets/images/dib.jpg',
+                    scale: 2.5,
+                    fit: BoxFit.contain,
+                  ),
+                  Image.asset(
+                    'assets/images/adib.jpg',
+                    scale: 2.5,
+                    fit: BoxFit.contain,
+                  ),
+                ],
+              ),
       ],
     );
   }

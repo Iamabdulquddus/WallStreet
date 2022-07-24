@@ -6,6 +6,7 @@ import 'package:wallstreet/pages/home_page.dart';
 void main() {
   runApp(const WallStreet());
 }
+
 class WallStreet extends StatelessWidget {
   const WallStreet({Key? key}) : super(key: key);
 
@@ -14,7 +15,10 @@ class WallStreet extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      theme: ThemeData(primarySwatch: Colors.orange, visualDensity: VisualDensity.adaptivePlatformDensity, ),
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
     );
   }
 }

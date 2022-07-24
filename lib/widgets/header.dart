@@ -12,238 +12,250 @@ class Header extends StatefulWidget {
 class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Container(
       color: Colors.white,
-      height: 100,
+      // height: 200,
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
           SizedBox(
-            width: 130,
+            width: screenSize.width/5,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('assets/images/Logo.png',  height: 50,),
-              SizedBox(
-              height: 4,
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                color: Color(0xff141182),
-                height: 46,
-                child: Center(
-                  child: Text(
-                    "- Get a free quote",
-                    style:
-                    TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
-                  ),
-                ),
-              ),
-            ],
-          ),
-
-          SizedBox(
-            width: 100,
-          ),
-          Column(
-            children: [
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: EdgeInsets.symmetric(vertical: 15),
                 child: Row(
+
                   children: [
-                    Column(
+                    Image.asset('assets/images/Logo.png',  width: screenSize.height / 4.5,),
+                    SizedBox(
+                      width: screenSize.width/18,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Row(
+                        Column(
                           children: [
-                            Icon(
-                              Icons.email_outlined,
-                              size: 30,
-                              color: Color(0xffd18d06),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            Row(
                               children: [
-                                Text(
-                                  "Email",
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                  ),
+                                Icon(
+                                  Icons.email_outlined,
+                                  size: 30,
+                                  color: Color(0xffd18d06),
                                 ),
-                                Text(
-                                  "support@wallstreetinvest.ae",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Email",
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                      ),
+                                    ),
+                                    Text(
+                                      "support@wallstreetinvest.ae",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
                           ],
                         ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 50,
-                    ),
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                        SizedBox(
+                          width: screenSize.width/40,
+                        ),
+                        Column(
                           children: [
-                            Icon(
-                              Icons.call,
-                              size: 30,
-                              color: Color(0xffd18d06),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text(
-                                  "24x7 online support",
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                  ),
+                                Icon(
+                                  Icons.call,
+                                  size: 30,
+                                  color: Color(0xffd18d06),
                                 ),
-                                Text(
-                                  "+971 54 592 0756",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                SizedBox(
+                                  width: 8,
                                 ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 50,
-                    ),
-                    Column(
-                      children: [
-                        Row(
-                          children: [
-                            Column(
-                              children: [
-                                Row(
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Color(0xffd18d06),
-                                      size: 15,
+                                    Text(
+                                      "24x7 online support",
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                      ),
                                     ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Color(0xffd18d06),
-                                      size: 15,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Color(0xffd18d06),
-                                      size: 15,
+                                    Text(
+                                      "+971 54 592 0756",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ],
                                 ),
-                                Row(
+                              ],
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          width:screenSize.width/40,
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Column(
                                   children: [
-                                    Icon(
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          color: Color(0xffd18d06),
+                                          size: 15,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Color(0xffd18d06),
+                                          size: 15,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Color(0xffd18d06),
+                                          size: 15,
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
 
-                                      Icons.star,
-                                      color: Color(0xffd18d06),
-                                      size: 15,
+                                          Icons.star,
+                                          color: Color(0xffd18d06),
+                                          size: 15,
+                                        ),
+                                        Icon(
+                                          Icons.star,
+                                          color: Color(0xffd18d06),
+                                          size: 15,
+                                        ),
+                                      ],
                                     ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Color(0xffd18d06),
-                                      size: 15,
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Google Map",
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                      ),
+                                    ),
+                                    Text(
+                                      "4.9/5",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ],
                                 ),
                               ],
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Google Map",
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                  ),
-                                ),
-                                Text(
-                                  "4.9/5",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
+                            )
                           ],
                         )
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-
-                  SizedBox(width: 30,),
-                  Container(
-                    color: Colors.grey.shade100,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        color: Color(0xff141182),
+                        height: 46,
+    width: screenSize.height / 4.4,
+                        child: Center(
+                          child: Text(
+                            "- Get a free quote",
+                            style:
+                            TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
                         children: [
-                          HeaderNav(text: "FREE ZONE", selected: true),
-                          SizedBox(
-                            width: 30,
+
+                          SizedBox(width: 30,),
+                          Container(
+                            color: Colors.grey.shade100,
+                            child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  HeaderNav(text: "FREE ZONE", selected: true),
+                                  SizedBox(
+                                    width: screenSize.width/50,
+                                  ),
+                                  HeaderNav(text: "OFFSHORE", selected: false),
+                                  SizedBox(
+                                    width: screenSize.width/50,
+                                  ),
+                                  HeaderNav(text: "MAINLAND", selected: false),
+                                  SizedBox(
+                                    width: screenSize.width/50,
+                                  ),
+                                  HeaderNav(text: "PRO SERVICES", selected: false),
+                                  SizedBox(
+                                    width: screenSize.width/50,
+                                  ),
+                                  HeaderNav(text: "BANKS", selected: false),
+                                  SizedBox(
+                                    width: screenSize.width/50,
+                                  ),
+                                  HeaderNav(text: "OTHER SERVICES", selected: false),
+                                  SizedBox(
+                                    width: screenSize.width/50,
+                                  ),
+                                  HeaderNav(text: "Contact", selected: false),
+                                ],
+                              ),
+                            ),
                           ),
-                          HeaderNav(text: "OFFSHORE", selected: false),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          HeaderNav(text: "MAINLAND", selected: false),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          HeaderNav(text: "PRO SERVICES", selected: false),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          HeaderNav(text: "BANKS", selected: false),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          HeaderNav(text: "OTHER SERVICES", selected: false),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          HeaderNav(text: "Contact", selected: false),
                         ],
                       ),
-                    ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(1, 1, 2, 0),
+                        width: screenSize.width/7.5,
+                        height: 42,
+                        child: buildSearchField(),
+                      ),
+                    ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(color: Color(0xff141182),),
-                    width: 46,
-                    height: 46,
-                    child: Icon(Icons.search, color: Colors.white,),
-                  ),
+
                 ],
               ),
             ],
@@ -274,7 +286,7 @@ class _HeaderNavState extends State<HeaderNav> {
         Text(
           widget.text,
           style: TextStyle(
-            fontSize: 13,
+            fontSize: 11,
           ),
         ),
         widget.selected
@@ -291,4 +303,30 @@ class _HeaderNavState extends State<HeaderNav> {
       ],
     );
   }
+}
+
+
+
+Widget buildSearchField() {
+  const color = Colors.grey;
+
+  return TextField(
+    style: TextStyle(color: color),
+    decoration: InputDecoration(
+      contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      hintText: 'Search',
+      hintStyle: TextStyle(color: color),
+      prefixIcon: Icon(Icons.search, color: color),
+      filled: true,
+      fillColor: Colors.white12,
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: BorderSide(color: color.withOpacity(0.7)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(5),
+        borderSide: BorderSide(color: color.withOpacity(0.7)),
+      ),
+    ),
+  );
 }

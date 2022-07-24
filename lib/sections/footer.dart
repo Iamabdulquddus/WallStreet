@@ -1,28 +1,350 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:wallstreet/widgets/responsive.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Column(
       children: [
-        SizedBox(
-          height: 40,
-        ),
         Container(
-          height: 500,
           width: double.infinity,
           color: Color(0xff141182),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(330, 60, 4, 40),
-            child: Row(
+            padding: const EdgeInsets.fromLTRB(0, 60, 4, 40),
+            child:
+            ResponsiveWidget.isSmallScreen(context) || ResponsiveWidget.isMediumScreen(context) ?
+            Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(right: 70),
-                  width: 240,
+                  width: screenSize.width,
+                  padding: EdgeInsets.only(right: screenSize.width/24),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset(
+                        "assets/images/logo.png",
+                       width: screenSize.width/4,
+                      ),
+                      SizedBox(width: 40,),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: screenSize.width/2,
+                            child: Text(
+                            'Churchill Executive Towers, Office No. 1007 Business Bay, Dubai – UAE',
+                            style: TextStyle(color: Colors.white),
+                        ),
+                          ),
+                          Text(
+                            '+971 54 592 0756',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            '1151 Walker Rd Ste 100 Dover, DE 1990 ,USA.',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            '+1 559 426 3747',
+                            style: TextStyle(color: Colors.white),
+                          ),],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only( top: 20, ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'POPULAR PRODUCTS',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        height: 20,
+                        width: screenSize.width/1.1,
+                        decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.white,
+                                width: 1.0,
+                              ),
+                            )),
+                        child: Text(
+                          '• RAK Offshore',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        height: 20,
+                        width: screenSize.width/1.1,
+                        decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.white,
+                                width: 1.0,
+                              ),
+                            )),
+                        child: Text(
+                          '• Jebel Ali Offshore',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        height: 20,
+                        width: screenSize.width/1.1,
+                        decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.white,
+                                width: 1.0,
+                              ),
+                            )),
+                        child: Text(
+                          '• Ajman Offshore',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        height: 20,
+                        width: screenSize.width/1.1,
+                        decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                //                   <--- right side
+                                color: Colors.white,
+                                width: 1.0,
+                              ),
+                            )),
+                        child: Text(
+                          '• Shams Free Zone',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        height: 20,
+                        width: screenSize.width/1.1,
+                        decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.white,
+                                width: 1.0,
+                              ),
+                            )),
+                        child: Text(
+                          '• IFZA Free Zone',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        height: 20,
+                        width: screenSize.width/1.1,
+                        decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                //                   <--- right side
+                                color: Colors.white,
+                                width: 1.0,
+                              ),
+                            )),
+                        child: Text(
+                          '• RAKEZ Free Zone',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        height: 20,
+                        width:screenSize.width/1.1,
+                        decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                //                   <--- right side
+                                color: Colors.white,
+                                width: 1.0,
+                              ),
+                            )),
+                        child: Text(
+                          '• JAFZA Offshore',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(right: screenSize.width/25, top: 20, left: screenSize.width/25),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'SIGN UP',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'To Get Latest Updates',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 200,
+                            height: 40,
+                            child: TextField(
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                              decoration: InputDecoration(
+                                  hintText: "Your email address",
+                                  hintStyle: TextStyle(
+                                      color: Colors.grey.shade400,
+                                      fontSize: 12),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        width: 1, color: Colors.white),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white),
+                            ),
+                          ),
+                          SizedBox(width: 5,),
+                          TextButton(
+                            onPressed: () {},
+                            style: TextButton.styleFrom(
+                              primary: Color(0xffd18d06),
+                              backgroundColor: Color(0xffd18d06),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(3),
+                                ),
+                              ),
+                              fixedSize: Size.fromHeight(40),
+                            ),
+                            child: Text(
+                              "- Submit",
+                              style:
+                              TextStyle(color: Colors.white, fontSize: 12),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Text(
+                        'FOLLOW ON SOCIALS',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                              padding:  EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(5),
+                              ), child: Icon(Icons.facebook, size: 35, color: Colors.white,)),
+                          Container(
+                              margin:  EdgeInsets.only(left: 10),
+                              padding:  EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(5),
+                              ), child: Icon(Icons.facebook, size: 35, color: Colors.white,)),
+                          Container(
+                              margin:  EdgeInsets.only(left: 10),
+                              padding:  EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(5),
+                              ), child: Icon(Icons.facebook, size: 35, color: Colors.white,)),
+                          Container(
+                              margin:  EdgeInsets.only(left: 10),
+                              padding:  EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(5),
+                              ), child: Icon(Icons.whatsapp_outlined, size: 35, color: Colors.white,)),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ) :
+            Row(
+              children: [
+                Container(
+                  width: screenSize.width/4.5,
+                ),
+                Container(
+                  padding: EdgeInsets.only(right: screenSize.width/24),
+                  width: screenSize.width/4.5,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -38,14 +360,17 @@ class Footer extends StatelessWidget {
                         'Churchill Executive Towers, Office No. 1007 Business Bay, Dubai – UAE',
                         style: TextStyle(color: Colors.white),
                       ),
+                      SizedBox(height: 10,),
                       Text(
                         '+971 54 592 0756',
                         style: TextStyle(color: Colors.white),
                       ),
+                      SizedBox(height: 10,),
                       Text(
                         '1151 Walker Rd Ste 100 Dover, DE 1990 ,USA.',
                         style: TextStyle(color: Colors.white),
                       ),
+                      SizedBox(height: 10,),
                       Text(
                         '+1 559 426 3747',
                         style: TextStyle(color: Colors.white),
@@ -70,11 +395,10 @@ class Footer extends StatelessWidget {
                       ),
                       Container(
                         height: 20,
-                        width: 200,
+                        width: screenSize.width/6,
                         decoration: BoxDecoration(
                             border: Border(
                           bottom: BorderSide(
-                            //                   <--- right side
                             color: Colors.white,
                             width: 1.0,
                           ),
@@ -91,11 +415,10 @@ class Footer extends StatelessWidget {
                       ),
                       Container(
                         height: 20,
-                        width: 200,
+                        width: screenSize.width/6,
                         decoration: BoxDecoration(
                             border: Border(
                           bottom: BorderSide(
-                            //                   <--- right side
                             color: Colors.white,
                             width: 1.0,
                           ),
@@ -112,7 +435,7 @@ class Footer extends StatelessWidget {
                       ),
                       Container(
                         height: 20,
-                        width: 200,
+                        width: screenSize.width/6,
                         decoration: BoxDecoration(
                             border: Border(
                           bottom: BorderSide(
@@ -133,7 +456,7 @@ class Footer extends StatelessWidget {
                       ),
                       Container(
                         height: 20,
-                        width: 200,
+                        width: screenSize.width/6,
                         decoration: BoxDecoration(
                             border: Border(
                           bottom: BorderSide(
@@ -154,7 +477,7 @@ class Footer extends StatelessWidget {
                       ),
                       Container(
                         height: 20,
-                        width: 200,
+                        width: screenSize.width/6,
                         decoration: BoxDecoration(
                             border: Border(
                           bottom: BorderSide(
@@ -175,7 +498,7 @@ class Footer extends StatelessWidget {
                       ),
                       Container(
                         height: 20,
-                        width: 200,
+                        width: screenSize.width/6,
                         decoration: BoxDecoration(
                             border: Border(
                           bottom: BorderSide(
@@ -196,7 +519,7 @@ class Footer extends StatelessWidget {
                       ),
                       Container(
                         height: 20,
-                        width: 200,
+                        width:screenSize.width/6,
                         decoration: BoxDecoration(
                             border: Border(
                           bottom: BorderSide(
@@ -219,7 +542,7 @@ class Footer extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(right: 50, top: 60, left: 50),
+                  padding: EdgeInsets.only(right: screenSize.width/25, top: 60, left: screenSize.width/25),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -303,33 +626,32 @@ class Footer extends StatelessWidget {
                       Row(
                         children: [
                           Container(
-                              margin:  EdgeInsets.all(15.0),
                               padding:  EdgeInsets.all(3.0),
                               decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(5),
-                          ), child: Icon(Icons.facebook, size: 40, color: Colors.white,)),
+                          ), child: Icon(Icons.facebook, size: 35, color: Colors.white,)),
                           Container(
-                              margin:  EdgeInsets.all(15.0),
+                              margin:  EdgeInsets.only(left: 10),
                               padding:  EdgeInsets.all(3.0),
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(5),
-                              ), child: Icon(Icons.facebook, size: 40, color: Colors.white,)),
+                              ), child: Icon(Icons.facebook, size: 35, color: Colors.white,)),
                           Container(
-                              margin:  EdgeInsets.all(15.0),
+                              margin:  EdgeInsets.only(left: 10),
                               padding:  EdgeInsets.all(3.0),
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(5),
-                              ), child: Icon(Icons.facebook, size: 40, color: Colors.white,)),
+                              ), child: Icon(Icons.facebook, size: 35, color: Colors.white,)),
                           Container(
-                              margin:  EdgeInsets.all(15.0),
+                              margin:  EdgeInsets.only(left: 10),
                               padding:  EdgeInsets.all(3.0),
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(5),
-                              ), child: Icon(Icons.whatsapp_outlined, size: 40, color: Colors.white,)),
+                              ), child: Icon(Icons.whatsapp_outlined, size: 35, color: Colors.white,)),
                         ],
                       )
                     ],
