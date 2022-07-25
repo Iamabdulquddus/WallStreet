@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:wallstreet/pages/home_page.dart';
+import 'package:wallstreet/pages/login_page.dart';
+import 'package:wallstreet/pages/signup_page.dart';
+import 'package:wallstreet/utils/routes.dart';
 
 void main() {
   runApp(const WallStreet());
@@ -19,6 +22,12 @@ class WallStreet extends StatelessWidget {
         primarySwatch: Colors.orange,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      initialRoute: MyRoutes.signupRoute,
+      routes: {
+        MyRoutes.loginRoute: (context) => const LoginPage(),
+        MyRoutes.signupRoute: (context) => const SignUpPage(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
+      },
     );
   }
 }

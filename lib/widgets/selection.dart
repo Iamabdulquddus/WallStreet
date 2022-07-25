@@ -77,7 +77,7 @@ class _SelectionState extends State<Selection> {
 
   int currentValue = 0;
 
-  bool btnPressed1 = false;
+  bool btnPressed1 = true;
   bool btnPressed2 = false;
   bool btnPressed3 = false;
 
@@ -105,7 +105,7 @@ class _SelectionState extends State<Selection> {
                         onPressed: () {
                           setState(() {
                             currentValue = 0;
-                            btnPressed1 = !btnPressed1;
+                            btnPressed1 = true;
                             btnPressed3 = false;
                             btnPressed2 = false;
                           });
@@ -146,7 +146,7 @@ class _SelectionState extends State<Selection> {
                         onPressed: () {
                           setState(() {
                             currentValue = 1;
-                            btnPressed2 = !btnPressed2;
+                            btnPressed2 = true;
                             btnPressed1 = false;
                             btnPressed3 = false;
                           });
@@ -188,7 +188,7 @@ class _SelectionState extends State<Selection> {
                         onPressed: () {
                           setState(() {
                             currentValue = 2;
-                            btnPressed3 = !btnPressed3;
+                            btnPressed3 = true;
                             btnPressed1 = false;
                             btnPressed2 = false;
                           });
@@ -235,13 +235,13 @@ class _SelectionState extends State<Selection> {
                         onPressed: () {
                           setState(() {
                             currentValue = 0;
-                            btnPressed1 = !btnPressed1;
+                            btnPressed1 = true;
                             btnPressed3 = false;
                             btnPressed2 = false;
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: btnPressed1 ? Colors.transparent : Color(0xffd18d06),
+                          primary: btnPressed1 ?  Color(0xffd18d06) : Colors.transparent,
                           elevation: 0,
                             padding: EdgeInsets.symmetric(vertical: 20),
                           shape: RoundedRectangleBorder(
@@ -273,7 +273,7 @@ class _SelectionState extends State<Selection> {
                         onPressed: () {
                           setState(() {
                             currentValue = 1;
-                            btnPressed2 = !btnPressed2;
+                            btnPressed2 = true;
                             btnPressed1 = false;
                             btnPressed3 = false;
                           });
@@ -311,7 +311,7 @@ class _SelectionState extends State<Selection> {
                         onPressed: () {
                           setState(() {
                             currentValue = 2;
-                            btnPressed3 = !btnPressed3;
+                            btnPressed3 = true;
                             btnPressed1 = false;
                             btnPressed2 = false;
                           });

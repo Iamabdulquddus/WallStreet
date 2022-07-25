@@ -196,7 +196,6 @@ class _HeaderState extends State<Header> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(0),),
                           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 21),
-
                         ),
                         child: Text(
                           "- Get a free quote",
