@@ -18,7 +18,7 @@ class WhyUs extends StatelessWidget {
         children: [
           Container(
             height: 200,
-            width: 450,
+            width: screenSize.width/1.2,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black12, width: 2),
             ),
@@ -40,7 +40,7 @@ class WhyUs extends StatelessWidget {
                     style: TextStyle(color: Colors.grey),
                   ),
 
-                  Image.asset('assets/images/payment-cards.png',scale: 1.5,),
+                  Image.asset('assets/images/payment-cards.png',),
 
                 ],
               ),
@@ -51,7 +51,7 @@ class WhyUs extends StatelessWidget {
           ),
           Container(
             height: 200,
-            width: 450,
+            width: screenSize.width/1.2,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black12, width: 2),
             ),
@@ -73,9 +73,12 @@ class WhyUs extends StatelessWidget {
                       Row(
                         children: [
                           Icon(Icons.check, color: Colors.green, size: 12,),
-                          Text(
-                            'We provide 30 day money back satisfaction guarantee to all \nour clients.',
-                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          SizedBox(
+                            width: screenSize.width/1.5,
+                            child: Text(
+                              'We provide 30 day money back satisfaction guarantee to all our clients.',
+                              style: TextStyle(color: Colors.grey, fontSize: 12),
+                            ),
                           ),
                         ],
                       ),
@@ -101,9 +104,12 @@ class WhyUs extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Icon(Icons.check, color: Colors.green, size: 12,),
-                          Text(
-                            "We provide bank account opening assistance through our \nwell-established banking relationships.",
-                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          SizedBox(
+                            width: screenSize.width/1.5,
+                            child: Text(
+                              "We provide bank account opening assistance through our well-established banking relationships.",
+                              style: TextStyle(color: Colors.grey, fontSize: 12),
+                            ),
                           ),
                         ],
                       ),

@@ -366,9 +366,12 @@ class Footer extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                       SizedBox(height: 10,),
-                      Text(
-                        '1151 Walker Rd Ste 100 Dover, DE 1990 ,USA.',
-                        style: TextStyle(color: Colors.white),
+                      SizedBox(
+                        width: screenSize.width/4,
+                        child: Text(
+                          '1151 Walker Rd Ste 100 Dover, DE 1990 ,USA.',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                       SizedBox(height: 10,),
                       Text(

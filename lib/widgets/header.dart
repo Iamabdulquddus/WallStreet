@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../pages/login_page.dart';
+import '../pages/signup_page.dart';
+
 class Header extends StatefulWidget {
   const Header({Key? key}) : super(key: key);
 
@@ -179,6 +182,39 @@ class _HeaderState extends State<Header> {
                         )
                       ],
                     ),
+                    SizedBox(
+                      width: screenSize.width / 30,
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => SignUpPage(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'sign up',
+                        style: TextStyle(
+                          color: Color(0xffd18d06),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Log in',
+                        style: TextStyle(
+                          color: Color(0xffd18d06),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -190,12 +226,14 @@ class _HeaderState extends State<Header> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TextButton(
-                        onPressed: () {  },
+                        onPressed: () {},
                         style: TextButton.styleFrom(
-                         backgroundColor: Color(0xff141182),
+                          backgroundColor: Color(0xff141182),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),),
-                          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 21),
+                            borderRadius: BorderRadius.circular(0),
+                          ),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 21),
                         ),
                         child: Text(
                           "- Get a free quote",

@@ -22,7 +22,7 @@ class WallStreet extends StatelessWidget {
         primarySwatch: Colors.orange,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: MyRoutes.signupRoute,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.signupRoute: (context) => const SignUpPage(),
