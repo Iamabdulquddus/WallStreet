@@ -88,7 +88,10 @@ class _SelectionState extends State<Selection> {
     return Container(
       width: screenSize.width / 1.67,
       height: 270,
-      color: Color(0xff141182).withOpacity(0.7),
+      decoration: BoxDecoration(
+        color: Color(0xffd18d06).withOpacity(0.5),
+        borderRadius: BorderRadius.circular(15),
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -111,11 +114,15 @@ class _SelectionState extends State<Selection> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: btnPressed1 ? Color(0xffd18d06) : Colors.transparent ,
+                          primary: btnPressed1
+                              ? Color(0xff141182)
+                              : Colors.transparent,
                           elevation: 0,
-                            padding: EdgeInsets.symmetric(vertical: 15),
+                          padding: EdgeInsets.symmetric(vertical: 15),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0), // <-- Radius
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(15),
+                            ), // <-- Radius
                           ),
                         ),
                         child: Column(
@@ -130,7 +137,7 @@ class _SelectionState extends State<Selection> {
                               'Free Zone',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.bold,
+                                // fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
                             ),
@@ -152,14 +159,16 @@ class _SelectionState extends State<Selection> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: btnPressed2 ? Color(0xffd18d06) : Colors.transparent,
+                          primary: btnPressed2
+                              ? Color(0xff141182)
+                              : Colors.transparent,
                           elevation: 0,
-                            padding: EdgeInsets.symmetric(vertical: 15),
+                          padding: EdgeInsets.symmetric(vertical: 15),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0), // <-- Radius
+                            borderRadius:
+                                BorderRadius.circular(0), // <-- Radius
                           ),
                         ),
-
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -173,7 +182,7 @@ class _SelectionState extends State<Selection> {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
-                                fontWeight: FontWeight.bold,
+                                // fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -194,11 +203,15 @@ class _SelectionState extends State<Selection> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: btnPressed3 ? Color(0xffd18d06) : Colors.transparent,
+                          primary: btnPressed3
+                              ? Color(0xff141182)
+                              : Colors.transparent,
                           elevation: 0,
-                            padding: EdgeInsets.symmetric(vertical: 15),
+                          padding: EdgeInsets.symmetric(vertical: 15),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0), // <-- Radius
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(15),
+                            ), // <-- Radius
                           ),
                         ),
                         child: Column(
@@ -214,7 +227,7 @@ class _SelectionState extends State<Selection> {
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                // fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -241,24 +254,30 @@ class _SelectionState extends State<Selection> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: btnPressed1 ?  Color(0xffd18d06) : Colors.transparent,
+                          primary: btnPressed1
+                              ? Color(0xff141182)
+                              : Colors.transparent,
                           elevation: 0,
-                            padding: EdgeInsets.symmetric(vertical: 20),
+                          padding: EdgeInsets.symmetric(vertical: 20),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0), // <-- Radius
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(15),
+                            ), // <-- Radius
                           ),
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Icon(
                               Icons.warehouse_outlined,
                               color: Colors.white,
+                              size: 20,
                             ),
                             Text(
                               'Free Zone',
                               style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                                // fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
                             ),
@@ -279,25 +298,30 @@ class _SelectionState extends State<Selection> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: btnPressed2 ? Color(0xffd18d06) : Colors.transparent,
+                          primary: btnPressed2
+                              ? Color(0xff141182)
+                              : Colors.transparent,
                           elevation: 0,
                           padding: EdgeInsets.symmetric(vertical: 20),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0), // <-- Radius
+                            borderRadius:
+                                BorderRadius.circular(0), // <-- Radius
                           ),
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Icon(
                               Icons.warehouse_outlined,
                               color: Colors.white,
+                              size: 20,
                             ),
                             Text(
                               'Offshore',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                                // fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -317,25 +341,31 @@ class _SelectionState extends State<Selection> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: btnPressed3 ? Color(0xffd18d06) : Colors.transparent,
+                          primary: btnPressed3
+                              ? Color(0xff141182)
+                              : Colors.transparent,
                           elevation: 0,
                           padding: EdgeInsets.symmetric(vertical: 20),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0), // <-- Radius
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(15),
+                            ), // <-- Radius
                           ),
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Icon(
                               Icons.warehouse_outlined,
                               color: Colors.white,
+                              size: 20,
                             ),
                             Text(
                               'Mainland',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                // fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -384,9 +414,25 @@ class _SectionOneState extends State<SectionOne> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  // color: Colors.white,
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items1.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -415,9 +461,25 @@ class _SectionOneState extends State<SectionOne> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  // color: Colors.white,
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items2.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -446,9 +508,25 @@ class _SectionOneState extends State<SectionOne> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  // color: Colors.white,
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items3.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -477,9 +555,24 @@ class _SectionOneState extends State<SectionOne> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items4.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -530,9 +623,20 @@ class _SectionOneState extends State<SectionOne> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items1.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -560,9 +664,20 @@ class _SectionOneState extends State<SectionOne> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items2.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -595,9 +710,20 @@ class _SectionOneState extends State<SectionOne> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items3.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -625,9 +751,20 @@ class _SectionOneState extends State<SectionOne> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items4.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -679,9 +816,20 @@ class _SectionOneState extends State<SectionOne> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded:true,
                         items: items1.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -709,9 +857,20 @@ class _SectionOneState extends State<SectionOne> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items2.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -744,9 +903,20 @@ class _SectionOneState extends State<SectionOne> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items3.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -774,9 +944,20 @@ class _SectionOneState extends State<SectionOne> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded:true,
                         items: items4.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -846,9 +1027,24 @@ class _SectionTwoState extends State<SectionTwo> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items1.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -877,9 +1073,24 @@ class _SectionTwoState extends State<SectionTwo> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items2.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -908,9 +1119,24 @@ class _SectionTwoState extends State<SectionTwo> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items3.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -939,9 +1165,24 @@ class _SectionTwoState extends State<SectionTwo> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items5.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -992,9 +1233,20 @@ class _SectionTwoState extends State<SectionTwo> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items1.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1022,9 +1274,20 @@ class _SectionTwoState extends State<SectionTwo> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items2.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1057,9 +1320,20 @@ class _SectionTwoState extends State<SectionTwo> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items3.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1087,9 +1361,20 @@ class _SectionTwoState extends State<SectionTwo> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items5.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1141,9 +1426,20 @@ class _SectionTwoState extends State<SectionTwo> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items1.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1171,9 +1467,20 @@ class _SectionTwoState extends State<SectionTwo> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items2.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1206,9 +1513,20 @@ class _SectionTwoState extends State<SectionTwo> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items3.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1236,9 +1554,20 @@ class _SectionTwoState extends State<SectionTwo> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items5.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1308,9 +1637,24 @@ class _SectionThreeState extends State<SectionThree> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items1.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -1339,9 +1683,24 @@ class _SectionThreeState extends State<SectionThree> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items2.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -1370,9 +1729,24 @@ class _SectionThreeState extends State<SectionThree> {
                 Container(
                   width: screenSize.width / 3.2,
                   height: 25,
-                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.white, //background color of dropdown button
+                      border: Border.all(
+                          color: Colors.orangeAccent.shade100,
+                          width: 1), //border of dropdown button
+                      borderRadius: BorderRadius.circular(
+                          5), //border raiuds of dropdown button
+                      boxShadow: <BoxShadow>[
+                        //apply shadow on Dropdown button
+                        BoxShadow(
+                            color: Color.fromRGBO(
+                                0, 0, 0, 0.27), //shadow for button
+                            blurRadius: 1) //blur radius of shadow
+                      ]),
                   child: Center(
                     child: DropdownButton(
+                      isExpanded: true,
                       items: items4.map((String items) {
                         return DropdownMenuItem(
                           value: items,
@@ -1426,9 +1800,20 @@ class _SectionThreeState extends State<SectionThree> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items1.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1456,9 +1841,20 @@ class _SectionThreeState extends State<SectionThree> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items2.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1491,9 +1887,20 @@ class _SectionThreeState extends State<SectionThree> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(7),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items4.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1519,7 +1926,6 @@ class _SectionThreeState extends State<SectionThree> {
                   SizedBox(
                     width: 15,
                   ),
-
                 ],
               ),
               SizedBox(
@@ -1549,9 +1955,20 @@ class _SectionThreeState extends State<SectionThree> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items1.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1579,9 +1996,20 @@ class _SectionThreeState extends State<SectionThree> {
                   ),
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items2.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1614,9 +2042,20 @@ class _SectionThreeState extends State<SectionThree> {
                 children: [
                   Container(
                     width: screenSize.width / 6,
-                    color: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Colors.orangeAccent.shade100, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.27),
+                              blurRadius: 1)
+                        ]),
                     child: Center(
                       child: DropdownButton(
+                        isExpanded: true,
                         items: items4.map((String items) {
                           return DropdownMenuItem(
                             value: items,
@@ -1663,622 +2102,3 @@ class _SectionThreeState extends State<SectionThree> {
     );
   }
 }
-
-
-// old code ...
-//
-// // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-//
-// import 'package:flutter/material.dart';
-// import 'package:wallstreet/widgets/responsive.dart';
-//
-// class Selection extends StatefulWidget {
-//   const Selection({Key? key}) : super(key: key);
-//
-//   @override
-//   State<Selection> createState() => _SelectionState();
-// }
-//
-// class _SelectionState extends State<Selection> {
-//   String dropDownValue1 = 'Select Activity';
-//   String dropDownValue2 = 'No. of Shareholders';
-//   String dropDownValue3 = 'Visa Allocation';
-//   String dropDownValue4 = 'All Emirates';
-//
-//   // List of items in our dropdown menu
-//   var items = [
-//     'Select Activity',
-//     'No. of Shareholders',
-//     'Visa Allocation',
-//     'All Emirates',
-//   ];
-//   @override
-//   Widget build(BuildContext context) {
-//     var screenSize = MediaQuery.of(context).size;
-//     return Container(
-//       width: screenSize.width / 1.67,
-//       height: 270,
-//       color: Color(0xff141182).withOpacity(0.7),
-//       child: Column(
-//         children: [
-//           ResponsiveWidget.isSmallScreen(context) ?
-//           Row(
-//             mainAxisSize: MainAxisSize.max,
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               Container(
-//                 padding: EdgeInsets.symmetric(vertical: 10),
-//                 width: screenSize.width / 5.48,
-//                 height: 67,
-//                 color: Color(0xffd18d06),
-//                 child: Column(
-//                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                   children: [
-//                     Icon(
-//                       Icons.warehouse_outlined,
-//                       color: Colors.white,
-//                       size: 20,
-//                     ),
-//
-//                     Text(
-//                       'Free Zone',
-//                       style: TextStyle(
-//                         fontSize: 15,
-//                         fontWeight: FontWeight.bold,
-//                         color: Colors.white,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               Container(
-//                 width: screenSize.width / 5.48,
-//                 height: 67,
-//                 padding: EdgeInsets.symmetric(vertical: 10),
-//                 child: Column(
-//                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                   children: [
-//                     Icon(
-//                       Icons.warehouse_outlined,
-//                       color: Colors.white,
-//                       size: 20,
-//                     ),
-//                     Text(
-//                       'Offshore',
-//                       style: TextStyle(
-//                         color: Colors.white,
-//                         fontSize: 15,
-//                         fontWeight: FontWeight.bold,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               Container(
-//                 width: screenSize.width / 5.48,
-//                 height: 67,
-//                 padding: EdgeInsets.symmetric(vertical: 10),
-//                 child: Column(
-//                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                   children: [
-//                     Icon(
-//                       Icons.warehouse_outlined,
-//                       color: Colors.white,
-//                       size: 20,
-//                     ),
-//                     Text(
-//                       'Mainland',
-//                       style: TextStyle(
-//                         fontSize: 15,
-//                         color: Colors.white,
-//                         fontWeight: FontWeight.bold,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ): Row(
-//             mainAxisSize: MainAxisSize.max,
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               Container(
-//                 padding: EdgeInsets.symmetric(vertical: 10),
-//                 width: screenSize.width / 5.01,
-//                 color: Color(0xffd18d06),
-//                 child: Column(
-//                   children: [
-//                     Icon(
-//                       Icons.warehouse_outlined,
-//                       color: Colors.white,
-//                     ),
-//                     Text(
-//                       'Free Zone',
-//                       style: TextStyle(
-//                         fontSize: 20,
-//                         fontWeight: FontWeight.bold,
-//                         color: Colors.white,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               Container(
-//                 width: screenSize.width / 5.01,
-//                 padding: EdgeInsets.symmetric(vertical: 10),
-//                 child: Column(
-//                   children: [
-//                     Icon(
-//                       Icons.warehouse_outlined,
-//                       color: Colors.white,
-//                     ),
-//                     Text(
-//                       'Offshore',
-//                       style: TextStyle(
-//                         color: Colors.white,
-//                         fontSize: 20,
-//                         fontWeight: FontWeight.bold,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               Container(
-//                 width: screenSize.width / 5.01,
-//                 padding: EdgeInsets.symmetric(vertical: 10),
-//                 child: Column(
-//                   children: [
-//                     Icon(
-//                       Icons.warehouse_outlined,
-//                       color: Colors.white,
-//                     ),
-//                     Text(
-//                       'Mainland',
-//                       style: TextStyle(
-//                         fontSize: 20,
-//                         color: Colors.white,
-//                         fontWeight: FontWeight.bold,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ),
-//           Container(
-//             height: 2,
-//             width: screenSize.width / 1.67,
-//             color: Colors.white,
-//           ),
-//           SizedBox(
-//             height: 20,
-//           ),
-//           if (ResponsiveWidget.isSmallScreen(context))
-//             Column(
-//               mainAxisAlignment: MainAxisAlignment.start,
-//               children: [
-//                 Container(
-//                   width: screenSize.width / 4,
-//                   height: 25,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue1 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue1,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   height: 7,
-//                 ),
-//                 Container(
-//                   width: screenSize.width / 4,
-//                   height: 25,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue2 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue2,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   height: 7,
-//                 ),
-//                 Container(
-//                   width: screenSize.width / 4,
-//                   height: 25,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue3 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue3,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   height: 7,
-//                 ),
-//                 Container(
-//                   width: screenSize.width / 4,
-//                   height: 25,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue4 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue4,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             )
-//           else if (ResponsiveWidget.isMediumScreen(context))
-//             Column(
-//               mainAxisAlignment: MainAxisAlignment.start,
-//               children: [
-//                 Row(
-//                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-//                   children: [
-//                     Container(
-//                       width: screenSize.width / 6,
-//                       color: Colors.white,
-//                       child: Center(
-//                         child: DropdownButton(
-//                           items: items.map((String items) {
-//                             return DropdownMenuItem(
-//                               value: items,
-//                               child: Text(
-//                                 items,
-//                                 style: TextStyle(fontSize: 11),
-//                               ),
-//                             );
-//                           }).toList(),
-//                           onChanged: (String? newValue) {
-//                             setState(() {
-//                               dropDownValue1 = newValue!;
-//                             });
-//                           },
-//                           value: dropDownValue1,
-//                           icon: Icon(
-//                             Icons.keyboard_arrow_down,
-//                           ),
-//                           underline: SizedBox(),
-//                         ),
-//                       ),
-//                     ),
-//                     Container(
-//                       width: screenSize.width / 6,
-//                       color: Colors.white,
-//                       child: Center(
-//                         child: DropdownButton(
-//                           items: items.map((String items) {
-//                             return DropdownMenuItem(
-//                               value: items,
-//                               child: Text(
-//                                 items,
-//                                 style: TextStyle(fontSize: 11),
-//                               ),
-//                             );
-//                           }).toList(),
-//                           onChanged: (String? newValue) {
-//                             setState(() {
-//                               dropDownValue2 = newValue!;
-//                             });
-//                           },
-//                           value: dropDownValue2,
-//                           icon: Icon(
-//                             Icons.keyboard_arrow_down,
-//                           ),
-//                           underline: SizedBox(),
-//                         ),
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//                 SizedBox(
-//                   height: 10,
-//                 ),
-//                 Row(
-//                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-//                   children: [
-//                     Container(
-//                       width: screenSize.width / 6,
-//                       color: Colors.white,
-//                       child: Center(
-//                         child: DropdownButton(
-//                           items: items.map((String items) {
-//                             return DropdownMenuItem(
-//                               value: items,
-//                               child: Text(
-//                                 items,
-//                                 style: TextStyle(fontSize: 11),
-//                               ),
-//                             );
-//                           }).toList(),
-//                           onChanged: (String? newValue) {
-//                             setState(() {
-//                               dropDownValue3 = newValue!;
-//                             });
-//                           },
-//                           value: dropDownValue3,
-//                           icon: Icon(
-//                             Icons.keyboard_arrow_down,
-//                           ),
-//                           underline: SizedBox(),
-//                         ),
-//                       ),
-//                     ),
-//                     Container(
-//                       width: screenSize.width / 6,
-//                       color: Colors.white,
-//                       child: Center(
-//                         child: DropdownButton(
-//                           items: items.map((String items) {
-//                             return DropdownMenuItem(
-//                               value: items,
-//                               child: Text(
-//                                 items,
-//                                 style: TextStyle(fontSize: 11),
-//                               ),
-//                             );
-//                           }).toList(),
-//                           onChanged: (String? newValue) {
-//                             setState(() {
-//                               dropDownValue4 = newValue!;
-//                             });
-//                           },
-//                           value: dropDownValue4,
-//                           icon: Icon(
-//                             Icons.keyboard_arrow_down,
-//                           ),
-//                           underline: SizedBox(),
-//                         ),
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ],
-//             )
-//           else
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//               children: [
-//                 SizedBox(
-//                   height: 80,
-//                 ),
-//                 Container(
-//                   width: screenSize.width / 9,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue1 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue1,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   width: 10,
-//                 ),
-//                 Container(
-//                   width: screenSize.width / 9,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue2 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue2,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   width: 10,
-//                 ),
-//                 Container(
-//                   width: screenSize.width / 9,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue3 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue3,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   width: 10,
-//                 ),
-//                 Container(
-//                   width: screenSize.width / 9,
-//                   color: Colors.white,
-//                   child: Center(
-//                     child: DropdownButton(
-//                       items: items.map((String items) {
-//                         return DropdownMenuItem(
-//                           value: items,
-//                           child: Text(
-//                             items,
-//                             style: TextStyle(fontSize: 11),
-//                           ),
-//                         );
-//                       }).toList(),
-//                       onChanged: (String? newValue) {
-//                         setState(() {
-//                           dropDownValue4 = newValue!;
-//                         });
-//                       },
-//                       value: dropDownValue4,
-//                       icon: Icon(
-//                         Icons.keyboard_arrow_down,
-//                       ),
-//                       underline: SizedBox(),
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           SizedBox(
-//             height: 20,
-//           ),
-//           if(ResponsiveWidget.isSmallScreen(context))
-//             ElevatedButton(
-//               style: ElevatedButton.styleFrom(
-//                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-//                 primary: Color(0xffd18d06),
-//               ),
-//               onPressed: () {},
-//               child: Text(
-//                 'Compare Prices',
-//                 style: TextStyle(
-//                   color: Colors.white,
-//                 ),
-//               ),
-//             )
-//           else if(ResponsiveWidget.isMediumScreen(context))
-//             ElevatedButton(
-//               style: ElevatedButton.styleFrom(
-//                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-//                 primary: Color(0xffd18d06),
-//               ),
-//               onPressed: () {},
-//               child: Text(
-//                 'Compare Prices',
-//                 style: TextStyle(
-//                   color: Colors.white,
-//                 ),
-//               ),
-//             )
-//           else ElevatedButton(
-//               style: ElevatedButton.styleFrom(
-//                 padding: EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-//                 primary: Color(0xffd18d06),
-//               ),
-//               onPressed: () {},
-//               child: Text(
-//                 'Compare Prices',
-//                 style: TextStyle(
-//                   color: Colors.white,
-//                 ),
-//               ),
-//             ),
-//         ],
-//       ),
-//     );
-//   }
-// }

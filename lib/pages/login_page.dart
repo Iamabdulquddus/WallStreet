@@ -26,7 +26,6 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
   late Animation<double> animation3;
   late Animation<double> animation4;
 
-
   @override
   void initState() {
     super.initState();
@@ -59,8 +58,8 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
         curve: Curves.easeInOut,
       ),
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     controller2 = AnimationController(
       vsync: this,
@@ -88,8 +87,8 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
         curve: Curves.easeInOut,
       ),
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     Timer(Duration(milliseconds: 2500), () {
       controller1.forward();
@@ -168,307 +167,348 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                 painter: MyPainter(animation4.value),
               ),
             ),
-            Center(
-              child:
-              ResponsiveWidget.isSmallScreen(context)?
-              Column(
-                children: [
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Image.asset(
-                    "assets/images/login.png",
-                    scale: 2.5,
-                    color: Colors.white.withOpacity(0.8),
-                    colorBlendMode: BlendMode.modulate,
-                    fit: BoxFit.cover,
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-
-                  Container(
-                    padding: const EdgeInsets.all(15.0),
-                    width: screenSize.width/1.5,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(.5),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    //form widget adds a lot of enteries in it.
-                    child: Form(
-                      //this is the key of the form.
-                      key: _formKey,
-                      child: Column(
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  Color(0xffc6d8fd).withOpacity(.02),
+                  Color(0xff141182).withOpacity(0.4)
+                ]),
+              ),
+              child: Center(
+                child: ResponsiveWidget.isSmallScreen(context)
+                    ? Column(
                         children: [
-                          Text(
-                            'Welcome $name',
-                            style: const TextStyle(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          const SizedBox(
+                            height: 20,
                           ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.8),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            child: TextFormField(
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: const InputDecoration(
-                                labelText: "Email",
-                                hintText: "Enter your email",
-                                prefixIcon: Icon(Icons.email_outlined),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1,),),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1),),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06),),
-                                ),
-                                focusedBorder:  OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06),),
-                                ),
-                              ),
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return "Email can't be empty";
-                                } else if (value.length < 6) {
-                                  return "length should be atleast 6";
-                                }
-                                return null;
-                              },
-                            ),
-                          ),
-                          SizedBox(height: 10,),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.8),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            child: TextFormField(
-                              obscureText: true,
-                              decoration: const InputDecoration(
-                                labelText: "Password",
-                                hintText: "Enter password",
-                                prefixIcon: Icon(Icons.person_outline),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1),),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1),),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06)),
-                                ),
-                                focusedBorder:  OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06)),
-                                ),
-                              ),
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return "Password can't be empty";
-                                } else if (value.length < 6) {
-                                  return "length should be atleast 6";
-                                }
-                                return null;
-                              },
-                            ),
+                          Image.asset(
+                            "assets/images/login.png",
+                            scale: 2.5,
+                            color: Colors.white.withOpacity(0.8),
+                            colorBlendMode: BlendMode.modulate,
+                            fit: BoxFit.cover,
                           ),
                           const SizedBox(
-                            height: 40,
+                            height: 20,
                           ),
-                          // making costume bottom here.
-                          // inkwell and gesture detector are almost the same but this got some effects in it.
-                          InkWell(
-                            onTap: () => moveToHome(context),
-                            // animated container ...duration is required in this .
-                            child: AnimatedContainer(
-                              duration: const Duration(seconds: 1),
-                              width: changeButton ? 40 : 130,
-                              height: 40,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: Color(0xffd18d06),
-                                borderRadius:
-                                BorderRadius.circular(changeButton ? 40 : 10),
-                              ),
-                              child: changeButton
-                                  ? const Icon(
-                                Icons.done,
-                                color: Colors.white,
-                              )
-                                  : const Text(
-                                'Log in',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                ),
+                          Container(
+                            padding: const EdgeInsets.all(15.0),
+                            width: screenSize.width / 1.5,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(.5),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            //form widget adds a lot of enteries in it.
+                            child: Form(
+                              //this is the key of the form.
+                              key: _formKey,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'Welcome $name',
+                                    style: const TextStyle(
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(.8),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: TextFormField(
+                                      keyboardType: TextInputType.emailAddress,
+                                      decoration: const InputDecoration(
+                                        labelText: "Email",
+                                        hintText: "Enter your email",
+                                        prefixIcon: Icon(Icons.email_outlined),
+                                        errorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Colors.red,
+                                            width: 1,
+                                          ),
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.red, width: 1),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffd18d06),
+                                          ),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffd18d06),
+                                          ),
+                                        ),
+                                      ),
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return "Email can't be empty";
+                                        } else if (value.length < 6) {
+                                          return "length should be atleast 6";
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(.8),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: TextFormField(
+                                      obscureText: true,
+                                      decoration: const InputDecoration(
+                                        labelText: "Password",
+                                        hintText: "Enter password",
+                                        prefixIcon: Icon(Icons.lock_outline),
+                                        errorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.red, width: 1),
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.red, width: 1),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color(0xffd18d06)),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color(0xffd18d06)),
+                                        ),
+                                      ),
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return "Password can't be empty";
+                                        } else if (value.length < 6) {
+                                          return "length should be atleast 6";
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 40,
+                                  ),
+                                  // making costume bottom here.
+                                  // inkwell and gesture detector are almost the same but this got some effects in it.
+                                  InkWell(
+                                    onTap: () => moveToHome(context),
+                                    // animated container ...duration is required in this .
+                                    child: AnimatedContainer(
+                                      duration: const Duration(seconds: 1),
+                                      width: changeButton ? 40 : 130,
+                                      height: 40,
+                                      alignment: Alignment.center,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xffd18d06),
+                                        borderRadius: BorderRadius.circular(
+                                            changeButton ? 40 : 10),
+                                      ),
+                                      child: changeButton
+                                          ? const Icon(
+                                              Icons.done,
+                                              color: Colors.white,
+                                            )
+                                          : const Text(
+                                              'Log in',
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                         ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                ],
-              )
-                  :
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    width: screenSize.width/2,
-                    height: MediaQuery.of(context).size.height,
-                    child: Image.asset(
-                      "assets/images/login.png",
-                      scale: 2.5,
-                      color: Colors.white.withOpacity(0.8),
-                      colorBlendMode: BlendMode.modulate,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  Container(
-                    width: screenSize.width/2.5,
-                    height: screenSize.width/2.5,
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(.5),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    //form widget adds a lot of enteries in it.
-                    child: Form(
-                      //this is the key of the form.
-                      key: _formKey,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      )
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(
-                            'Welcome $name',
-                            style: const TextStyle(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(height: 20,),
                           Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.8),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            child: TextFormField(
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: const InputDecoration(
-                                labelText: "Email",
-                                hintText: "Enter your email",
-                                prefixIcon: Icon(Icons.email_outlined),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1),),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1),),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06),),
-                                ),
-                                focusedBorder:  OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06),),
-                                ),
-                              ),
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return "Password can't be empty";
-                                } else if (value.length < 6) {
-                                  return "length should be atleast 6";
-                                }
-                                return null;
-                              },
+                            padding: EdgeInsets.all(5),
+                            width: screenSize.width / 2,
+                            height: MediaQuery.of(context).size.height,
+                            child: Image.asset(
+                              "assets/images/login.png",
+                              scale: 2.5,
+                              color: Colors.white.withOpacity(0.8),
+                              colorBlendMode: BlendMode.modulate,
+                              fit: BoxFit.contain,
                             ),
                           ),
-                          SizedBox(height: 10,),
                           Container(
+                            width: screenSize.width / 2.5,
+                            height: screenSize.width / 2.5,
+                            padding: EdgeInsets.all(20),
                             decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.8),
-                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.white.withOpacity(.5),
+                              borderRadius: BorderRadius.circular(15),
                             ),
-                            child: TextFormField(
-                              obscureText: true,
-                              decoration: const InputDecoration(
-                                labelText: "Password",
-                                hintText: "Enter password",
-                                prefixIcon: Icon(Icons.person_outline),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1),),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.red, width: 1),),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06),),
-                                ),
-                                focusedBorder:  OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xffd18d06),),
-                                ),
-                              ),
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return "Password can't be empty";
-                                } else if (value.length < 6) {
-                                  return "length should be atleast 6";
-                                }
-                                return null;
-                              },
-                            ),
-                          ),
+                            //form widget adds a lot of enteries in it.
+                            child: Form(
+                              //this is the key of the form.
+                              key: _formKey,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Welcome $name',
+                                    style: const TextStyle(
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(.8),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: TextFormField(
+                                      keyboardType: TextInputType.emailAddress,
+                                      decoration: const InputDecoration(
+                                        labelText: "Email",
+                                        hintText: "Enter your email",
+                                        prefixIcon: Icon(Icons.email_outlined),
+                                        errorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.red, width: 1),
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.red, width: 1),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffd18d06),
+                                          ),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffd18d06),
+                                          ),
+                                        ),
+                                      ),
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return "Password can't be empty";
+                                        } else if (value.length < 6) {
+                                          return "length should be atleast 6";
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(.8),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                    child: TextFormField(
+                                      obscureText: true,
+                                      decoration: const InputDecoration(
+                                        labelText: "Password",
+                                        hintText: "Enter password",
+                                        prefixIcon: Icon(Icons.lock_outline),
+                                        errorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.red, width: 1),
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.red, width: 1),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffd18d06),
+                                          ),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffd18d06),
+                                          ),
+                                        ),
+                                      ),
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return "Password can't be empty";
+                                        } else if (value.length < 6) {
+                                          return "length should be atleast 6";
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
 
-                          const SizedBox(
-                            height: 40,
-                          ),
-                          // making costume buttom here.
-                          // inkwell and guesture dector are almost the same but this got some effects in it.
-                          InkWell(
-                            onTap: () {
-                              moveToHome(context);
-                            },
-                            // animated container ...duration is required in this .
-                            child: AnimatedContainer(
-                              duration: const Duration(seconds: 1),
-                              width: changeButton ? 50 : 130,
-                              height: 50,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: Color(0xffd18d06),
-                                borderRadius:
-                                BorderRadius.circular(changeButton ? 50 : 10),
-                              ),
-                              child: changeButton
-                                  ? const Icon(
-                                Icons.done,
-                                color: Colors.white,
-                              )
-                                  : const Text(
-                                'Log in',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white,
-                                ),
+                                  const SizedBox(
+                                    height: 40,
+                                  ),
+                                  // making costume buttom here.
+                                  // inkwell and guesture dector are almost the same but this got some effects in it.
+                                  InkWell(
+                                    onTap: () {
+                                      moveToHome(context);
+                                    },
+                                    // animated container ...duration is required in this .
+                                    child: AnimatedContainer(
+                                      duration: const Duration(seconds: 1),
+                                      width: changeButton ? 50 : 130,
+                                      height: 50,
+                                      alignment: Alignment.center,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xffd18d06),
+                                        borderRadius: BorderRadius.circular(
+                                            changeButton ? 50 : 10),
+                                      ),
+                                      child: changeButton
+                                          ? const Icon(
+                                              Icons.done,
+                                              color: Colors.white,
+                                            )
+                                          : const Text(
+                                              'Log in',
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
                         ],
                       ),
-                    ),
-                  ),
-                ],
               ),
             ),
           ],
-
         ),
       ),
     );
   }
 }
-
 
 class MyPainter extends CustomPainter {
   final double radius;
@@ -479,9 +519,9 @@ class MyPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
       ..shader = LinearGradient(
-          colors: [Color(0xffd18d06), Color(0xfffda253)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight)
+              colors: [Color(0xffd18d06), Color(0xfffda253)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight)
           .createShader(Rect.fromCircle(
         center: Offset(0, 0),
         radius: radius,
@@ -495,4 +535,3 @@ class MyPainter extends CustomPainter {
     return true;
   }
 }
-

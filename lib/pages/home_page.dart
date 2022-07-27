@@ -49,9 +49,9 @@ class _HomePageState extends State<HomePage> {
                 buildSearchField(context),
                 SizedBox(width: 5,),
                 TextButton(onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUpPage(),),);
-                }, child: Text('sign up',style: TextStyle(color: Color(0xffd18d06),),),),
+                }, child: Text('Sign Up',style: TextStyle(color: Color(0xffd18d06),),),),
                 TextButton(onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginPage(),),);
-                }, child: Text('Log in',style: TextStyle(color: Color(0xffd18d06),),),),
+                }, child: Text('Log In',style: TextStyle(color: Color(0xffd18d06),),),),
               ],
             ),
           ),
@@ -81,6 +81,8 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   image: DecorationImage(
                     image: AssetImage('assets/images/background1.jpg'),
+                    colorFilter: ColorFilter.mode(
+                        Colors.blue.shade800.withOpacity(.4), BlendMode.colorBurn),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -103,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                       height: 620,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: Color(0xff141182).withOpacity(0.9),
+                        color: Color(0xff141182).withOpacity(0.7),
                         image: DecorationImage(
                           image: AssetImage('assets/images/background.jpg',),
                           colorFilter: ColorFilter.mode(

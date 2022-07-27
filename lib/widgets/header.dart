@@ -21,10 +21,8 @@ class _HeaderState extends State<Header> {
       // height: 200,
       width: MediaQuery.of(context).size.width,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            width: screenSize.width / 5,
-          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -60,13 +58,13 @@ class _HeaderState extends State<Header> {
                                     Text(
                                       "Email",
                                       style: TextStyle(
-                                        fontSize: 10,
+                                        fontSize: 12,
                                       ),
                                     ),
                                     Text(
                                       "support@wallstreetinvest.ae",
                                       style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                        fontSize: 10,
                                       ),
                                     ),
                                   ],
@@ -97,19 +95,19 @@ class _HeaderState extends State<Header> {
                                     Text(
                                       "24x7 online support",
                                       style: TextStyle(
-                                        fontSize: 10,
+                                        fontSize: 12,
                                       ),
                                     ),
                                     Text(
                                       "+971 54 592 0756",
                                       style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                        fontSize: 10,
                                       ),
                                     ),
                                   ],
                                 ),
                               ],
-                            )
+                            ),
                           ],
                         ),
                         SizedBox(
@@ -165,21 +163,21 @@ class _HeaderState extends State<Header> {
                                     Text(
                                       "Google Map",
                                       style: TextStyle(
-                                        fontSize: 10,
+                                        fontSize: 12,
                                       ),
                                     ),
                                     Text(
                                       "4.9/5",
                                       style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                                          fontSize: 10,
                                       ),
                                     ),
                                   ],
                                 ),
                               ],
-                            )
+                            ),
                           ],
-                        )
+                        ),
                       ],
                     ),
                     SizedBox(
